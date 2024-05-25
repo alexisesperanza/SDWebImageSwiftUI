@@ -658,13 +658,7 @@ extension AnimatedImage {
         // But 2: there are no way to call a Protocol Extention default implementation in Swift 5.1
         // So, we directly call the implementation detail modifier instead
         // Fired Radar: FB7413534
-        let _ = self.setImageLayoutAspectRatio(aspectRatio, contentMode: contentMode)
-        if let aspectRatio {
-            self.modifier(_AspectRatioLayout(aspectRatio: aspectRatio, contentMode: contentMode))
-        } else {
-            self
-        }
-    }
+
 
     /// Constrains this view's dimensions to the aspect ratio of the given size.
     /// - Parameters:
